@@ -1,0 +1,113 @@
+.root {
+    -fx-background-image: url("/images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+
+}
+/* Encabezado */
+.header-box {
+    -fx-background-color: #1e1e2f;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Secciones principales */
+.main-box {
+    -fx-background-color: #292c3e;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+.main-box {
+    -fx-background-color: transparent;
+}
+
+/* Botón *//*
+.primary-button {
+    -fx-background-color: #4c91ff;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+*/.primary-button {
+      -fx-background-color: #4c91ff;
+      -fx-text-fill: white;
+      -fx-font-size: 16px;
+      -fx-font-weight: bold;
+      -fx-background-radius: 8px;
+      -fx-cursor: hand;
+      -fx-padding: 10px 20px;
+  }
+.primary-button:hover {
+    -fx-background-color: #6da4ff;
+    -fx-translate-y: -2;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #3b3b4f;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+}
+
+/* Tabla */
+.table-view {
+    -fx-background-color: #2a2d36;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4c91ff;
+    -fx-text-fill: white;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+/* Barras y áreas */
+.progress-bar {
+    -fx-accent: #00e676;
+    -fx-control-inner-background: #404040;
+}
+
+.text-area {
+    -fx-control-inner-background: #1e1e2f;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: monospace;
+    -fx-border-radius: 5px;
+}
+
+.list-view {
+    -fx-control-inner-background: #2e2e3d;
+    -fx-border-radius: 5px;
+    -fx-text-fill: white;
+}
+
+/* Pestañas desplegables */
+.titled-pane > .title {
+    -fx-background-color: #333344;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 10, 0.5, 0, 0);
+    -fx-rotate: 5; /* se puede cambiar dinámicamente */
+}>

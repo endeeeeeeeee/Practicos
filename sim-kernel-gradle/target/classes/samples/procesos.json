@@ -1,0 +1,9 @@
+{
+  "procesos": [
+    { "nombre": "Editor", "tiempo": 5, "memoria": 100, "prioridad": 1 },
+    { "nombre": "Compilador", "tiempo": 8, "memoria": 150, "prioridad": 2 },
+    { "nombre": "Navegador", "tiempo": 4, "memoria": 80,  "prioridad": 3 },
+    { "nombre": "Terminal", "tiempo": 6, "memoria": 90,  "prioridad": 1 },
+    { "nombre": "Updater",  "tiempo": 3, "memoria": 70,  "prioridad": 2 }
+  ]
+}

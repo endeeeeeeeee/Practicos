@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.simkernel.ui.SplashController"
+           styleClass="splash-root">
+    <VBox alignment="CENTER" spacing="20">
+        <Label fx:id="labelMensaje" text="" styleClass="splash-text"/>
+        <ProgressBar fx:id="barraCarga" prefWidth="300"/>
+    </VBox>
+</StackPane>

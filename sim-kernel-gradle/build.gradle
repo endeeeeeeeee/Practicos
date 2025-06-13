@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+javafx {
+    version = '21'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
+    implementation 'org.openjfx:javafx-graphics:21'
+
+
+        implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
+        implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+
+
+    implementation 'com.theokanning.openai-gpt3-java:api:0.18.2'
+    implementation 'com.theokanning.openai-gpt3-java:client:0.18.2'
+    implementation 'com.theokanning.openai-gpt3-java:service:0.18.2'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+
+        implementation 'com.theokanning.openai-gpt3-java:service:0.18.2'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'       // Para hacer peticiones HTTP
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0' // Para parsear JSON
+
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+
+
+
+}
+
+application {
+    mainClass = 'com.simkernel.ui.MainApp'
+}
+
+run {
+    jvmArgs = ['--module-path', classpath.asPath, '--add-modules', 'javafx.controls,javafx.fxml,javafx.graphics']
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}

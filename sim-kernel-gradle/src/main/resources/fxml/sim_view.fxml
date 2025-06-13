@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.simkernel.ui.SimViewController">
+
+    <top>
+        <VBox spacing="10" styleClass="header-box">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Sim-Kernel: Sistema Operativo Simulado" styleClass="title-label"/>
+            <HBox spacing="10">
+                <Label text="Estrategia de Memoria:"/>
+                <ComboBox fx:id="comboEstrategia" prefWidth="160">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="First Fit"/>
+                            <String fx:value="Best Fit"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button fx:id="btnSimular" text="🚀 Iniciar Simulación" styleClass="primary-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" styleClass="tab-pane">
+
+            <!-- TAB PRINCIPAL -->
+            <Tab text="Procesos">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <TitledPane text="📋 Procesos Activos" expanded="true" styleClass="label-subtle">
+
+
+                    <content>
+                            <TableView fx:id="tablaProcesos">
+                                <columns>
+                                    <TableColumn fx:id="colPid" text="PID"/>
+                                    <TableColumn fx:id="colNombre" text="Nombre"/>
+                                    <TableColumn fx:id="colEstado" text="Estado"/>
+                                    <TableColumn fx:id="colTiempo" text="Tiempo restante"/>
+                                </columns>
+                            </TableView>
+                        </content>
+                    </TitledPane>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="💾 Estado de Memoria:"  />
+                        <ProgressBar fx:id="barraMemoria" prefWidth="300"/>
+                    </HBox>
+                </VBox>
+            </Tab>
+
+            <!-- TAB PROCESOS BLOQUEADOS -->
+            <Tab text="Bloqueados">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <TitledPane text="📛 Procesos Bloqueados" styleClass="label-Bloqueados"
+                                expanded="true">
+
+                        <content>
+                            <TableView fx:id="tablaBloqueados">
+                                <columns>
+                                    <TableColumn fx:id="colBloqPid" text="PID"/>
+                                    <TableColumn fx:id="colBloqNombre" text="Nombre"/>
+                                    <TableColumn fx:id="colBloqMotivo" text="Estado"/>
+                                </columns>
+                            </TableView>
+                        </content>
+                    </TitledPane>
+                </VBox>
+            </Tab>
+
+            <!-- TAB LOGS Y ACCESOS -->
+            <Tab text="Sistema">
+
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <TitledPane text="📝 Logs del Sistema" styleClass="label-subtle">
+                        <content>
+                            <TextArea fx:id="logArea" editable="false" wrapText="true" prefHeight="120"/>
+                        </content>
+                    </TitledPane>
+                    <TitledPane text="🔒 Accesos Denegados"
+                        styleClass= "label-Denegado">
+                        <content>
+                            <ListView fx:id="listaSeguridad" prefHeight="100"/>
+                        </content>
+                    </TitledPane>
+                    <TitledPane text="📌 Procesos en Espera o Bloqueados"
+                        styleClass="label-Bloqueados">
+                        <content>
+                            <ListView fx:id="listaProcesosEnEspera" prefHeight="100"/>
+                        </content>
+                    </TitledPane>
+                </VBox>
+            </Tab>
+
+            <!-- TAB ASISTENTE IA -->
+            <Tab text="Asistente IA">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <TextField fx:id="inputPregunta" promptText="Haz una pregunta..."  prefWidth="400"/>
+                    <TextArea fx:id="chatArea"
+                              wrapText="true"
+                              editable="false"
+                              prefHeight="380"
+                              styleClass="text-area"/>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

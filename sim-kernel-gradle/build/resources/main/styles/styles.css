@@ -1,0 +1,150 @@
+.root {
+    -fx-background-image: url("/images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Encabezado */
+.header-box {
+    -fx-background-color: #1e1e2f;
+}
+.title-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Botón */
+.primary-button {
+    -fx-background-color: #4c91ff;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+.primary-button:hover {
+    -fx-background-color: #6da4ff;
+    -fx-translate-y: -2;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* ComboBox */
+.combo-box, .combo-box .list-cell {
+    -fx-background-color: #3b3b4f;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+}
+
+/* Tabla */
+.table-view {
+    -fx-background-color: #2a2d36;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+.table-view .column-header-background {
+    -fx-background-color: #1e1e2f;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #d0d0d0;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.table-row-cell:selected {
+    -fx-background-color: #4c91ff;
+    -fx-text-fill: white;
+}
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+/* Barras y Áreas */
+.progress-bar {
+    -fx-accent: #00e676;
+    -fx-control-inner-background: #404040;
+}
+.text-area {
+    -fx-control-inner-background: #1e1e2f;
+    -fx-text-fill: white;
+    -fx-font-family: monospace;
+    -fx-border-radius: 5px;
+}
+.text-field {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+/* ListView */
+.list-view {
+    -fx-control-inner-background: #2e2e3d;
+    -fx-border-radius: 5px;
+    -fx-text-fill: white;
+}
+.list-view .list-cell {
+    -fx-text-fill: white;
+}
+
+/* Paneles */
+.titled-pane > .title {
+    -fx-background-color: #333344;
+    -fx-text-fill: #b0b5c0;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.titled-pane > .content {
+    -fx-background-color: #1e1e2f;
+}
+
+/* Etiquetas suaves (para logs, estado, etc) */
+.label-subtle,
+.label-Procesos,
+.label-Bloqueados,
+.label-Denegado {
+    -fx-text-fill: #b0b5c0;
+    -fx-font-size: 13px;
+}
+
+/* ScrollPane transparente */
+.scroll-pane,
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.label-subtle {
+    -fx-text-fill: #b0b5c0;
+    -fx-font-size: 13px;
+}
+
+
+
+.table-view .column-header-background {
+    -fx-background-color: #1e1e2f; /* Fondo oscuro */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #999999; /* Gris medio, más oscuro que #d0d0d0 */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.text-field {
+ -fx-text-fill: #857f7f;
+    -fx-font-size: 13px;
+
+}
+#chatArea {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-control-inner-background: #1a1a2e; /* Fondo más oscuro */
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-wrap-text: true;
+}
+

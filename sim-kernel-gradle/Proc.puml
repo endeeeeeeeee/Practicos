@@ -1,0 +1,20 @@
+@startuml
+class Proc {
+  - id: int
+  - state: State
+  - resources: Resource[]
+}
+
+class SyncKernel {
+  - lock: Lock
+  - processes: Proc[]
+}
+
+Proc --* SyncKernel
+SyncKernel -- Lock
+
+State --> {Creation, Execution, Block, Termination}
+
+Resource --> {File, Network, Keyboard}
+
+@enduml

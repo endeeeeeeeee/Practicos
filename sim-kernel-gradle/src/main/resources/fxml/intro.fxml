@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.simkernel.ui.IntroController" style="-fx-background-color: black;">
+
+    <!-- Fondo glitch animado -->
+    <ImageView fx:id="bgGlitch" fitWidth="800" fitHeight="600" opacity="0.3" />
+
+    <!-- Texto de error -->
+    <Label fx:id="txtGlitch" text="SISTEMA FALLANDO..." style="-fx-text-fill: red; -fx-font-size: 36px; -fx-font-weight: bold;" />
+
+    <!-- Avatar del técnico -->
+    <ImageView fx:id="tecnico" fitHeight="180" fitWidth="180" opacity="0" />
+
+    <!-- Texto de reparación -->
+    <Label fx:id="txtFixing" text="REPARANDO SISTEMA..." style="-fx-text-fill: lime; -fx-font-size: 24px; -fx-opacity: 0;" />
+
+</StackPane>
